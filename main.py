@@ -2,10 +2,10 @@ import datetime
 import time
 import popup
 
-print("Current date and time")
 class Main():
     while(1):
+        print("Current date and time")
         now = datetime.datetime.now()
         now = now.strftime("%Y-%m-%d %H:%M:%S")
-        popup.popupmsg(now)
-        time.sleep(1)
+        popup.Popup.popupmsg(now)
+        
