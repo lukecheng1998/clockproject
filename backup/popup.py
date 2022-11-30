@@ -1,6 +1,8 @@
 from cProfile import label
 import tkinter as tk
 from tkinter import ttk
+import datetime
+
 LARGE_FONT = ("Helvetica", 156)
 NORM_FONT = ("Helvetica", 10)
 SMALL_FONT = ("Helvetica", 8)
@@ -15,7 +17,8 @@ class Popup():
         popup.attributes("-fullscreen", False)
         popup.after(1000, lambda:popup.destroy())
         popup.mainloop()
-    def add(input):
-        input.add()
-    def remove(input):
-        return
+    def refresh(self):
+        now = datetime.datetime.now()
+        now = now.strftime("%m-%d-%Y %H:%M:%S")
+        self.config(text=now)
+        self.mainloop()
