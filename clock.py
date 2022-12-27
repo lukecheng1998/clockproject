@@ -9,6 +9,7 @@ except:
 window = Tk()
 window.title("Clock")
 window.attributes("-fullscreen", True)
+window.configure(background="black")
 tabsControl = Notebook(window)
 clockTab = Frame(tabsControl)
 tabsControl.add(clockTab, text="Clock")
