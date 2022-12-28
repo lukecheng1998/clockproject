@@ -8,7 +8,8 @@ except:
     import os #other
 window = Tk()
 window.title("Clock")
-window.geometry('500x250')
+window.attributes("-fullscreen", True)
+window.configure(background="black")
 tabsControl = Notebook(window)
 clockTab = Frame(tabsControl)
 tabsControl.add(clockTab, text="Clock")
