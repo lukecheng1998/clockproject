@@ -9,15 +9,16 @@ except:
 window = Tk()
 window.title("Clock")
 window.attributes("-fullscreen", True)
-window.configure(background="black")
 tabsControl = Notebook(window)
 clockTab = Frame(tabsControl)
 tabsControl.add(clockTab, text="Clock")
 tabsControl.pack(expand = 1, fill = "both")
-timeLabel = Label(clockTab, font = 'Helvetica 40 bold', foreground = 'white')
+timeLabel = Label(clockTab, font = 'Helvetica 40 bold', foreground = 'black')
 timeLabel.pack(anchor='center')
-dateLabel = Label(clockTab, font = 'Helvetica 40 bold', foreground = 'white')
+dateLabel = Label(clockTab, font = 'Helvetica 40 bold', foreground = 'black')
 dateLabel.pack(anchor='s')
+
+
 
 def clock():
     dateTime = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S/%p")
